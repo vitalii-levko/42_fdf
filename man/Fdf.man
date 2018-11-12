@@ -1,0 +1,44 @@
+
+FDF(1)				General Manual				FDF(1)
+
+/*NAME*/
+	/*fdf*/ -- a simplified 3D graphic "wireframe" ("fils de fer" in 
+	french) representation of a relief landscape
+
+/*SYNOPSIS*/
+	/*./fdf*/ /*--help*/ | /*map_source_file*/
+
+/*DESCRIPTION*/
+	The /*fdf*/ utility models in 3D relief landscapes linking various points
+	(x, y, z) via segments. It uses a map source file passed as a
+	parameter.
+
+	The option is as follows:
+
+	/*--help*/  Display the general manual page.
+
+	Source file should contain at least one coordinate of the 'int' type
+	representing an altitude of the correspondent point. Meanwhile the
+	horizontal position corresponds to its axis. And the vertical
+	position corresponds to its ordinate. All coordinates should be
+	separated by spaces. Each coordinate might be followed with its
+	color in '0xffffff' format separated by ',' as a delimiter. For
+	example:
+
+	0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+	0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+	0  0 10 10  0  0 10 10  0  0  0 10 10 10 10 10  0  0  0
+	0  0 10 10  0  0 10 10  0  0  0  0  0  0  0 10 10  0  0
+	0  0 10 10  0  0 10 10  0  0  0  0  0  0  0 10 10  0  0
+	0  0 10 10 10 10 10 10  0  0  0  0 10 10 10 10  0  0  0
+	0  0  0 10 10 10 10 10  0  0  0 10 10  0  0  0  0  0  0
+	0  0  0  0  0  0 10 10  0  0  0 10 10  0  0  0  0  0  0
+	0  0  0  0  0  0 10 10  0  0  0 10 10 10 10 10 10  0  0
+	0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+	0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+/*DIAGNOSTICS*/
+	The /*fdf*/ utility exits 0 on success, and >0 if error occurs.
+
+UNIT Factory			August 1, 2018			  UNIT Factory
+/^(END)^/
